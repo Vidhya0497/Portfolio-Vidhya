@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>R Vidhya Raj | Software Developer Portfolio</title>
+<meta name="description" content="R Vidhya Raj — Aspiring Software Developer specializing in Full-Stack Development, AI-powered solutions and modern web applications." />
+<meta name="keywords" content="R Vidhya Raj, Software Developer, Full Stack Developer, Portfolio, AI Developer, Computer Science" />
+<meta name="author" content="R Vidhya Raj" />
+<meta property="og:title" content="R Vidhya Raj | Software Developer Portfolio" />
+<meta property="og:description" content="Aspiring Software Developer building beautiful web applications and AI-powered solutions." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%230a0e1a%22/><text x=%2250%22 y=%2266%22 font-size=%2246%22 font-family=%22monospace%22 font-weight=%22700%22 fill=%22%2322d3ee%22 text-anchor=%22middle%22>VR</text></svg>">
+</head>
+<body>
+
+<!-- ============ SPLASH SCREEN ============ -->
+<div id="splash-screen">
+  <div class="splash-inner">
+    <div class="splash-badge">
+      <span>VR</span>
+    </div>
+    <p class="splash-text">Loading Portfolio</p>
+    <div class="splash-bar"><span></span></div>
+  </div>
+</div>
+
+<!-- ============ BACKGROUND CANVAS ============ -->
+<canvas id="bg-canvas"></canvas>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo" aria-label="Vidhya Raj — Home">
+      <span class="logo-mark">VR</span>
+    </a>
+
+    <nav class="nav-menu" id="nav-menu">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#education" class="nav-link" data-section="education">Education</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
+      <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
+      <a href="#coding" class="nav-link" data-section="coding">Coding</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="assets/resume/R_Vidhya_Raj_Resume.pdf" download="R_Vidhya_Raj_Resume.pdf" class="btn btn-glow btn-sm nav-resume-btn">Resume</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HOME ============ -->
+  <section id="home" class="section hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content" data-animate="fade-up">
+        <span class="eyebrow-pill"><span class="pulse-dot"></span>Open to Internships &amp; Full Time Roles</span>
+        <h1 class="hero-title">
+          <span class="hero-greet">Hi, I'm</span>
+          <span class="hero-name gradient-text">R Vidhya Raj</span>
+        </h1>
+        <h2 class="hero-subtitle">Aspiring Software Developer</h2>
+        <p class="hero-desc">Pre-final year Computer Science and Design student skilled in Java and web development, building innovative solutions for real-world challenges.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary"><span>View My Work</span></a>
+          <a href="assets/resume/R_Vidhya_Raj_Resume.pdf" download="R_Vidhya_Raj_Resume.pdf" class="btn btn-glass">Download Resume</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-visual" data-animate="fade-in" data-delay="150">
+        <div class="hero-photo-ring">
+          <div class="ring-glow"></div>
+          <img src="assets/images/profile/profile.jpeg" alt="R Vidhya Raj profile photo" class="hero-photo" width="420" height="420" />
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true"><span></span></div>
+  </section>
+
+  <section class="glance" aria-label="At a glance">
+    <div class="container">
+      <div class="hero-stats" data-animate="fade-up">
+        <div class="stat-card"><span class="stat-num" data-decimal="9.05">0</span><span class="stat-label">CGPA</span></div>
+        <div class="stat-card"><span class="stat-num" data-count="4">0</span><span class="stat-label">Featured Projects</span></div>
+        <div class="stat-card"><span class="stat-num" data-count="2">0</span><span class="stat-label">Patents Filed</span></div>
+        <div class="stat-card"><span class="stat-num" data-count="19">0</span><span class="stat-label">Certifications</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section about-section">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="section-eyebrow">Get to know me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-photo-wrap" data-animate="fade-right">
+          <div class="about-photo-glow"></div>
+          <img src="assets/images/profile/profile.jpeg" alt="R Vidhya Raj" class="about-photo" loading="lazy" width="360" height="360" />
+        </div>
+
+        <div class="about-content" data-animate="fade-left">
+          <p class="about-intro">I'm a pre-final year Computer Science and Design student at Easwari Engineering College, skilled in Java and web development. I enjoy building innovative solutions for real-world challenges and collaborating effectively in team environments. My projects span IoT, autonomous robot fleet management and AI-assisted healthcare, with two patents filed.</p>
+
+
+          <div class="traits-grid">
+            <div class="trait-chip glass-card" data-animate="pop" data-delay="0">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              <span>Quick Learner</span>
+            </div>
+            <div class="trait-chip glass-card" data-animate="pop" data-delay="80">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.5 21h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <span>Creative Thinker</span>
+            </div>
+            <div class="trait-chip glass-card" data-animate="pop" data-delay="160">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 0 0-2 2v4M15 3h4a2 2 0 0 1 2 2v4M9 21H5a2 2 0 0 1-2-2v-4M15 21h4a2 2 0 0 0 2-2v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <span>Problem Solver</span>
+            </div>
+            <div class="trait-chip glass-card" data-animate="pop" data-delay="240">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6"/><path d="M16 21v-.6a4.4 4.4 0 0 1 4.6-4.4" stroke="currentColor" stroke-width="1.6"/></svg>
+              <span>Team Player</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="section-eyebrow">What I work with</span>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+      </div>
+    </div>
+    <div class="marquee-wrap" data-animate="fade-up">
+        <div class="marquee" style="--dur:38s"><div class="marquee-track"><div class="mq-set"><span class="mq-cat">Programming Languages</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/java.svg" alt="" width="18" height="18" loading="lazy" />Java</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/python.svg" alt="" width="18" height="18" loading="lazy" />Python</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/c-lang.svg" alt="" width="18" height="18" loading="lazy" />C</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/javascript.svg" alt="" width="18" height="18" loading="lazy" />JavaScript</span><span class="mq-cat">Frontend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/html5.svg" alt="" width="18" height="18" loading="lazy" />HTML5</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/css3.svg" alt="" width="18" height="18" loading="lazy" />CSS3</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/react.svg" alt="" width="18" height="18" loading="lazy" />React</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Programming Languages</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/java.svg" alt="" width="18" height="18" loading="lazy" />Java</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/python.svg" alt="" width="18" height="18" loading="lazy" />Python</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/c-lang.svg" alt="" width="18" height="18" loading="lazy" />C</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/javascript.svg" alt="" width="18" height="18" loading="lazy" />JavaScript</span><span class="mq-cat">Frontend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/html5.svg" alt="" width="18" height="18" loading="lazy" />HTML5</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/css3.svg" alt="" width="18" height="18" loading="lazy" />CSS3</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/react.svg" alt="" width="18" height="18" loading="lazy" />React</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Programming Languages</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/java.svg" alt="" width="18" height="18" loading="lazy" />Java</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/python.svg" alt="" width="18" height="18" loading="lazy" />Python</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/c-lang.svg" alt="" width="18" height="18" loading="lazy" />C</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/javascript.svg" alt="" width="18" height="18" loading="lazy" />JavaScript</span><span class="mq-cat">Frontend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/html5.svg" alt="" width="18" height="18" loading="lazy" />HTML5</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/css3.svg" alt="" width="18" height="18" loading="lazy" />CSS3</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/react.svg" alt="" width="18" height="18" loading="lazy" />React</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Programming Languages</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/java.svg" alt="" width="18" height="18" loading="lazy" />Java</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/python.svg" alt="" width="18" height="18" loading="lazy" />Python</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/c-lang.svg" alt="" width="18" height="18" loading="lazy" />C</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/javascript.svg" alt="" width="18" height="18" loading="lazy" />JavaScript</span><span class="mq-cat">Frontend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/html5.svg" alt="" width="18" height="18" loading="lazy" />HTML5</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/css3.svg" alt="" width="18" height="18" loading="lazy" />CSS3</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/react.svg" alt="" width="18" height="18" loading="lazy" />React</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Programming Languages</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/java.svg" alt="" width="18" height="18" loading="lazy" />Java</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/python.svg" alt="" width="18" height="18" loading="lazy" />Python</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/c-lang.svg" alt="" width="18" height="18" loading="lazy" />C</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/javascript.svg" alt="" width="18" height="18" loading="lazy" />JavaScript</span><span class="mq-cat">Frontend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/html5.svg" alt="" width="18" height="18" loading="lazy" />HTML5</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/css3.svg" alt="" width="18" height="18" loading="lazy" />CSS3</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/react.svg" alt="" width="18" height="18" loading="lazy" />React</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Programming Languages</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/java.svg" alt="" width="18" height="18" loading="lazy" />Java</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/python.svg" alt="" width="18" height="18" loading="lazy" />Python</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/c-lang.svg" alt="" width="18" height="18" loading="lazy" />C</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/javascript.svg" alt="" width="18" height="18" loading="lazy" />JavaScript</span><span class="mq-cat">Frontend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/html5.svg" alt="" width="18" height="18" loading="lazy" />HTML5</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/css3.svg" alt="" width="18" height="18" loading="lazy" />CSS3</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/react.svg" alt="" width="18" height="18" loading="lazy" />React</span></div></div></div>
+        <div class="marquee rev" style="--dur:62s"><div class="marquee-track"><div class="mq-set"><span class="mq-cat">Backend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/nodejs.svg" alt="" width="18" height="18" loading="lazy" />Node.js</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/express.svg" alt="" width="18" height="18" loading="lazy" />Express</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/rest-api.svg" alt="" width="18" height="18" loading="lazy" />REST APIs</span><span class="mq-pill"><i class="mq-dot"></i>Flask</span><span class="mq-cat">Databases</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mongodb.svg" alt="" width="18" height="18" loading="lazy" />MongoDB</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mysql.svg" alt="" width="18" height="18" loading="lazy" />MySQL</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/sql.svg" alt="" width="18" height="18" loading="lazy" />SQL</span><span class="mq-cat">Core Computer Science</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dsa.svg" alt="" width="18" height="18" loading="lazy" />Data Structures &amp; Algorithms</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/oop.svg" alt="" width="18" height="18" loading="lazy" />OOP</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dbms.svg" alt="" width="18" height="18" loading="lazy" />DBMS</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/operating-systems.svg" alt="" width="18" height="18" loading="lazy" />Operating Systems</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/computer-networks.svg" alt="" width="18" height="18" loading="lazy" />Computer Networks</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/problem-solving.svg" alt="" width="18" height="18" loading="lazy" />Problem Solving</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Backend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/nodejs.svg" alt="" width="18" height="18" loading="lazy" />Node.js</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/express.svg" alt="" width="18" height="18" loading="lazy" />Express</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/rest-api.svg" alt="" width="18" height="18" loading="lazy" />REST APIs</span><span class="mq-pill"><i class="mq-dot"></i>Flask</span><span class="mq-cat">Databases</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mongodb.svg" alt="" width="18" height="18" loading="lazy" />MongoDB</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mysql.svg" alt="" width="18" height="18" loading="lazy" />MySQL</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/sql.svg" alt="" width="18" height="18" loading="lazy" />SQL</span><span class="mq-cat">Core Computer Science</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dsa.svg" alt="" width="18" height="18" loading="lazy" />Data Structures &amp; Algorithms</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/oop.svg" alt="" width="18" height="18" loading="lazy" />OOP</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dbms.svg" alt="" width="18" height="18" loading="lazy" />DBMS</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/operating-systems.svg" alt="" width="18" height="18" loading="lazy" />Operating Systems</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/computer-networks.svg" alt="" width="18" height="18" loading="lazy" />Computer Networks</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/problem-solving.svg" alt="" width="18" height="18" loading="lazy" />Problem Solving</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Backend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/nodejs.svg" alt="" width="18" height="18" loading="lazy" />Node.js</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/express.svg" alt="" width="18" height="18" loading="lazy" />Express</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/rest-api.svg" alt="" width="18" height="18" loading="lazy" />REST APIs</span><span class="mq-pill"><i class="mq-dot"></i>Flask</span><span class="mq-cat">Databases</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mongodb.svg" alt="" width="18" height="18" loading="lazy" />MongoDB</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mysql.svg" alt="" width="18" height="18" loading="lazy" />MySQL</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/sql.svg" alt="" width="18" height="18" loading="lazy" />SQL</span><span class="mq-cat">Core Computer Science</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dsa.svg" alt="" width="18" height="18" loading="lazy" />Data Structures &amp; Algorithms</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/oop.svg" alt="" width="18" height="18" loading="lazy" />OOP</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dbms.svg" alt="" width="18" height="18" loading="lazy" />DBMS</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/operating-systems.svg" alt="" width="18" height="18" loading="lazy" />Operating Systems</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/computer-networks.svg" alt="" width="18" height="18" loading="lazy" />Computer Networks</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/problem-solving.svg" alt="" width="18" height="18" loading="lazy" />Problem Solving</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Backend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/nodejs.svg" alt="" width="18" height="18" loading="lazy" />Node.js</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/express.svg" alt="" width="18" height="18" loading="lazy" />Express</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/rest-api.svg" alt="" width="18" height="18" loading="lazy" />REST APIs</span><span class="mq-pill"><i class="mq-dot"></i>Flask</span><span class="mq-cat">Databases</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mongodb.svg" alt="" width="18" height="18" loading="lazy" />MongoDB</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mysql.svg" alt="" width="18" height="18" loading="lazy" />MySQL</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/sql.svg" alt="" width="18" height="18" loading="lazy" />SQL</span><span class="mq-cat">Core Computer Science</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dsa.svg" alt="" width="18" height="18" loading="lazy" />Data Structures &amp; Algorithms</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/oop.svg" alt="" width="18" height="18" loading="lazy" />OOP</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dbms.svg" alt="" width="18" height="18" loading="lazy" />DBMS</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/operating-systems.svg" alt="" width="18" height="18" loading="lazy" />Operating Systems</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/computer-networks.svg" alt="" width="18" height="18" loading="lazy" />Computer Networks</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/problem-solving.svg" alt="" width="18" height="18" loading="lazy" />Problem Solving</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Backend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/nodejs.svg" alt="" width="18" height="18" loading="lazy" />Node.js</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/express.svg" alt="" width="18" height="18" loading="lazy" />Express</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/rest-api.svg" alt="" width="18" height="18" loading="lazy" />REST APIs</span><span class="mq-pill"><i class="mq-dot"></i>Flask</span><span class="mq-cat">Databases</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mongodb.svg" alt="" width="18" height="18" loading="lazy" />MongoDB</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mysql.svg" alt="" width="18" height="18" loading="lazy" />MySQL</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/sql.svg" alt="" width="18" height="18" loading="lazy" />SQL</span><span class="mq-cat">Core Computer Science</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dsa.svg" alt="" width="18" height="18" loading="lazy" />Data Structures &amp; Algorithms</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/oop.svg" alt="" width="18" height="18" loading="lazy" />OOP</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dbms.svg" alt="" width="18" height="18" loading="lazy" />DBMS</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/operating-systems.svg" alt="" width="18" height="18" loading="lazy" />Operating Systems</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/computer-networks.svg" alt="" width="18" height="18" loading="lazy" />Computer Networks</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/problem-solving.svg" alt="" width="18" height="18" loading="lazy" />Problem Solving</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Backend Development</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/nodejs.svg" alt="" width="18" height="18" loading="lazy" />Node.js</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/express.svg" alt="" width="18" height="18" loading="lazy" />Express</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/rest-api.svg" alt="" width="18" height="18" loading="lazy" />REST APIs</span><span class="mq-pill"><i class="mq-dot"></i>Flask</span><span class="mq-cat">Databases</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mongodb.svg" alt="" width="18" height="18" loading="lazy" />MongoDB</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/mysql.svg" alt="" width="18" height="18" loading="lazy" />MySQL</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/sql.svg" alt="" width="18" height="18" loading="lazy" />SQL</span><span class="mq-cat">Core Computer Science</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dsa.svg" alt="" width="18" height="18" loading="lazy" />Data Structures &amp; Algorithms</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/oop.svg" alt="" width="18" height="18" loading="lazy" />OOP</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/dbms.svg" alt="" width="18" height="18" loading="lazy" />DBMS</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/operating-systems.svg" alt="" width="18" height="18" loading="lazy" />Operating Systems</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/computer-networks.svg" alt="" width="18" height="18" loading="lazy" />Computer Networks</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/problem-solving.svg" alt="" width="18" height="18" loading="lazy" />Problem Solving</span></div></div></div>
+        <div class="marquee" style="--dur:46s"><div class="marquee-track"><div class="mq-set"><span class="mq-cat">Developer Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/git.svg" alt="" width="18" height="18" loading="lazy" />Git</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/github.svg" alt="" width="18" height="18" loading="lazy" />GitHub</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/vscode.svg" alt="" width="18" height="18" loading="lazy" />VS Code</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/eclipse.svg" alt="" width="18" height="18" loading="lazy" />Eclipse</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/cursor.svg" alt="" width="18" height="18" loading="lazy" />Cursor</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/figma.svg" alt="" width="18" height="18" loading="lazy" />Figma</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/canva.svg" alt="" width="18" height="18" loading="lazy" />Canva</span><span class="mq-cat">Other Technical Skills</span><span class="mq-pill"><i class="mq-dot"></i>AI Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/machine-learning.svg" alt="" width="18" height="18" loading="lazy" />Machine Learning</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/openai.svg" alt="" width="18" height="18" loading="lazy" />OpenAI APIs</span><span class="mq-pill"><i class="mq-dot"></i>Gemini API</span><span class="mq-pill"><i class="mq-dot"></i>OCR</span><span class="mq-pill"><i class="mq-dot"></i>IoT &amp; Embedded Systems</span><span class="mq-pill"><i class="mq-dot"></i>Tableau</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Developer Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/git.svg" alt="" width="18" height="18" loading="lazy" />Git</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/github.svg" alt="" width="18" height="18" loading="lazy" />GitHub</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/vscode.svg" alt="" width="18" height="18" loading="lazy" />VS Code</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/eclipse.svg" alt="" width="18" height="18" loading="lazy" />Eclipse</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/cursor.svg" alt="" width="18" height="18" loading="lazy" />Cursor</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/figma.svg" alt="" width="18" height="18" loading="lazy" />Figma</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/canva.svg" alt="" width="18" height="18" loading="lazy" />Canva</span><span class="mq-cat">Other Technical Skills</span><span class="mq-pill"><i class="mq-dot"></i>AI Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/machine-learning.svg" alt="" width="18" height="18" loading="lazy" />Machine Learning</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/openai.svg" alt="" width="18" height="18" loading="lazy" />OpenAI APIs</span><span class="mq-pill"><i class="mq-dot"></i>Gemini API</span><span class="mq-pill"><i class="mq-dot"></i>OCR</span><span class="mq-pill"><i class="mq-dot"></i>IoT &amp; Embedded Systems</span><span class="mq-pill"><i class="mq-dot"></i>Tableau</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Developer Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/git.svg" alt="" width="18" height="18" loading="lazy" />Git</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/github.svg" alt="" width="18" height="18" loading="lazy" />GitHub</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/vscode.svg" alt="" width="18" height="18" loading="lazy" />VS Code</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/eclipse.svg" alt="" width="18" height="18" loading="lazy" />Eclipse</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/cursor.svg" alt="" width="18" height="18" loading="lazy" />Cursor</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/figma.svg" alt="" width="18" height="18" loading="lazy" />Figma</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/canva.svg" alt="" width="18" height="18" loading="lazy" />Canva</span><span class="mq-cat">Other Technical Skills</span><span class="mq-pill"><i class="mq-dot"></i>AI Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/machine-learning.svg" alt="" width="18" height="18" loading="lazy" />Machine Learning</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/openai.svg" alt="" width="18" height="18" loading="lazy" />OpenAI APIs</span><span class="mq-pill"><i class="mq-dot"></i>Gemini API</span><span class="mq-pill"><i class="mq-dot"></i>OCR</span><span class="mq-pill"><i class="mq-dot"></i>IoT &amp; Embedded Systems</span><span class="mq-pill"><i class="mq-dot"></i>Tableau</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Developer Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/git.svg" alt="" width="18" height="18" loading="lazy" />Git</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/github.svg" alt="" width="18" height="18" loading="lazy" />GitHub</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/vscode.svg" alt="" width="18" height="18" loading="lazy" />VS Code</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/eclipse.svg" alt="" width="18" height="18" loading="lazy" />Eclipse</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/cursor.svg" alt="" width="18" height="18" loading="lazy" />Cursor</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/figma.svg" alt="" width="18" height="18" loading="lazy" />Figma</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/canva.svg" alt="" width="18" height="18" loading="lazy" />Canva</span><span class="mq-cat">Other Technical Skills</span><span class="mq-pill"><i class="mq-dot"></i>AI Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/machine-learning.svg" alt="" width="18" height="18" loading="lazy" />Machine Learning</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/openai.svg" alt="" width="18" height="18" loading="lazy" />OpenAI APIs</span><span class="mq-pill"><i class="mq-dot"></i>Gemini API</span><span class="mq-pill"><i class="mq-dot"></i>OCR</span><span class="mq-pill"><i class="mq-dot"></i>IoT &amp; Embedded Systems</span><span class="mq-pill"><i class="mq-dot"></i>Tableau</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Developer Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/git.svg" alt="" width="18" height="18" loading="lazy" />Git</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/github.svg" alt="" width="18" height="18" loading="lazy" />GitHub</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/vscode.svg" alt="" width="18" height="18" loading="lazy" />VS Code</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/eclipse.svg" alt="" width="18" height="18" loading="lazy" />Eclipse</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/cursor.svg" alt="" width="18" height="18" loading="lazy" />Cursor</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/figma.svg" alt="" width="18" height="18" loading="lazy" />Figma</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/canva.svg" alt="" width="18" height="18" loading="lazy" />Canva</span><span class="mq-cat">Other Technical Skills</span><span class="mq-pill"><i class="mq-dot"></i>AI Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/machine-learning.svg" alt="" width="18" height="18" loading="lazy" />Machine Learning</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/openai.svg" alt="" width="18" height="18" loading="lazy" />OpenAI APIs</span><span class="mq-pill"><i class="mq-dot"></i>Gemini API</span><span class="mq-pill"><i class="mq-dot"></i>OCR</span><span class="mq-pill"><i class="mq-dot"></i>IoT &amp; Embedded Systems</span><span class="mq-pill"><i class="mq-dot"></i>Tableau</span></div><div class="mq-set" aria-hidden="true"><span class="mq-cat">Developer Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/git.svg" alt="" width="18" height="18" loading="lazy" />Git</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/github.svg" alt="" width="18" height="18" loading="lazy" />GitHub</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/vscode.svg" alt="" width="18" height="18" loading="lazy" />VS Code</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/eclipse.svg" alt="" width="18" height="18" loading="lazy" />Eclipse</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/cursor.svg" alt="" width="18" height="18" loading="lazy" />Cursor</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/figma.svg" alt="" width="18" height="18" loading="lazy" />Figma</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/canva.svg" alt="" width="18" height="18" loading="lazy" />Canva</span><span class="mq-cat">Other Technical Skills</span><span class="mq-pill"><i class="mq-dot"></i>AI Tools</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/machine-learning.svg" alt="" width="18" height="18" loading="lazy" />Machine Learning</span><span class="mq-pill"><img class="skill-icon" src="assets/icons/skills/openai.svg" alt="" width="18" height="18" loading="lazy" />OpenAI APIs</span><span class="mq-pill"><i class="mq-dot"></i>Gemini API</span><span class="mq-pill"><i class="mq-dot"></i>OCR</span><span class="mq-pill"><i class="mq-dot"></i>IoT &amp; Embedded Systems</span><span class="mq-pill"><i class="mq-dot"></i>Tableau</span></div></div></div>
+        </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="section-eyebrow">Featured Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Robotics, IoT, AI and full-stack projects built to solve real-world problems.</p>
+      </div>
+      <div class="projects-list">
+        <article class="project-card glass-card" data-animate="fade-up" data-delay="0">
+          <div class="project-media"><img src="assets/images/projects/intellinav.jpg" alt="IntelliNav autonomous mobile robots in a warehouse with a fleet map dashboard" loading="lazy" width="818" height="444" /></div>
+          <div class="project-info">
+            <h3 class="project-title">IntelliNav – Intelligent AMR Fleet Management System</h3>
+            <p class="project-desc">Fleet management system that coordinates multiple Autonomous Mobile Robots in a shared environment. It allocates tasks using robot location, availability, battery level, workload and priority, reassigns tasks on faults, manages path conflicts, and provides live fleet monitoring and task tracking.</p>
+            <div class="tech-badges"><span class="tech-badge">Python</span><span class="tech-badge">ROS</span><span class="tech-badge">SLAM</span><span class="tech-badge">LiDAR</span></div>
+            <div class="project-actions"><button type="button" class="btn btn-glass btn-sm" data-modal-image="assets/images/patents/intellinav_patent.jpg" data-modal-title="IntelliNav – Patent Application No. 202641109033 A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Patent Filed</button><a href="https://github.com/Vidhya0497/IntelliNav" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>GitHub Repository</a><a href="https://drive.google.com/file/d/1PgExGtAWedB0wded0OshAFBmeIUU_1cw/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-glow btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>View Simulated Map</a><a href="https://drive.google.com/file/d/1GZ1JYnE-6EUjj9gKlTkC4fFCWoibHzRk/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-glow btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>View Live Map</a></div>
+          </div>
+        </article>
+        <article class="project-card glass-card reverse" data-animate="fade-up" data-delay="100">
+          <div class="project-media"><img src="assets/images/projects/food-freshness.jpg" alt="Food container with sensors, microcontroller and display showing freshness status" loading="lazy" width="818" height="444" /></div>
+          <div class="project-info">
+            <h3 class="project-title">Smart Food Freshness Monitoring System</h3>
+            <p class="project-desc">IoT-based food freshness monitoring system that reduces food waste and improves food safety by integrating sensors and intelligent monitoring for real-time freshness analysis.</p>
+            <div class="tech-badges"><span class="tech-badge">IoT</span><span class="tech-badge">Embedded Systems</span><span class="tech-badge">Tinkercad</span><span class="tech-badge">Sensors</span></div>
+            <div class="project-actions"><a href="https://github.com/Vidhya0497/freshlink-food-rescue-network" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>GitHub Repository</a><button type="button" class="btn btn-glass btn-sm" data-modal-trigger="patent-modal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Patent Proof</button></div>
+          </div>
+        </article>
+        <article class="project-card glass-card" data-animate="fade-up" data-delay="0">
+          <div class="project-media"><img src="assets/images/projects/medscan-ai.jpg" alt="MedScan AI report analyzer showing an analysis result on a laptop" loading="lazy" width="818" height="444" /></div>
+          <div class="project-info">
+            <h3 class="project-title">MedScan AI – AI-Powered Medical Report &amp; Prescription Analyzer</h3>
+            <p class="project-desc">Progressive Web App that turns prescriptions and medical reports (PDF or image) into easy-to-understand insights, using OCR-based text extraction and Google Gemini for AI-assisted interpretation.</p>
+            <div class="tech-badges"><span class="tech-badge">Python</span><span class="tech-badge">Flask</span><span class="tech-badge">Google Gemini API</span><span class="tech-badge">Tesseract OCR</span><span class="tech-badge">PWA</span></div>
+            <div class="project-actions"><a href="https://github.com/Vidhya0497/MedScanAI" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>GitHub Repository</a><a href="https://drive.google.com/file/d/1m__BwTePwdDarOLIx4IjpMvE0QL0oU8A/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-glow btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Live Demo</a></div>
+          </div>
+        </article>
+        <article class="project-card glass-card reverse" data-animate="fade-up" data-delay="100">
+          <div class="project-media"><img src="assets/images/projects/smartcart.jpg" alt="SmartCart grocery shopping app on a laptop beside a shopping cart of produce" loading="lazy" width="818" height="444" /></div>
+          <div class="project-info">
+            <h3 class="project-title">SmartCart – MERN Stack Grocery Shopping Application</h3>
+            <p class="project-desc">Online grocery shopping application with customer and admin dashboards, product management, intelligent product search, shopping cart, budget-aware product recommendations and order management.</p>
+            <div class="tech-badges"><span class="tech-badge">MongoDB</span><span class="tech-badge">Express</span><span class="tech-badge">React</span><span class="tech-badge">Node.js</span></div>
+            <div class="project-actions"><a href="https://github.com/Vidhya0497/smartcart-grocery" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>GitHub Repository</a><a href="https://drive.google.com/file/d/1l3qD_gQgNM5WTLaVnEDhTg6QW-kVFYY6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-glow btn-sm"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Live Demo</a></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="section-eyebrow">Academic Journey</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <div class="timeline-item" data-animate="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-year">2024 &ndash; Present</span>
+            <h3 class="timeline-title">B.E. Computer Science and Design</h3>
+            <p class="timeline-org">SRM Easwari Engineering College</p>
+            <p class="timeline-meta">Current CGPA: <strong>9.05</strong></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate="fade-up" data-delay="120">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-year">2024</span>
+            <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
+            <p class="timeline-org">Sri RKM Sarada Vidyalaya Girls Higher Secondary School</p>
+            <p class="timeline-meta">Scored <strong>89.8%</strong></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate="fade-up" data-delay="240">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-year">2022</span>
+            <h3 class="timeline-title">Secondary School Leaving Certificate (SSLC)</h3>
+            <p class="timeline-org">Sri RKM Sarada Vidyalaya Girls Higher Secondary School</p>
+            <p class="timeline-meta">Scored <strong>95%</strong></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate="fade-up" data-delay="360">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-year">Certification</span>
+            <h3 class="timeline-title">Hindi Certification</h3>
+            <p class="timeline-org">Completed 6 levels of Hindi examinations</p>
+            <p class="timeline-meta">Parichay &middot; Prathmic &middot; Madyama &middot; Rashtrabasha &middot; Praveshika &middot; Vishaarad Poorvadh</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="section-eyebrow">Where I've worked</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="experience-grid">
+
+        <div class="experience-card glass-card" data-animate="fade-up">
+          <div class="exp-icon"><span>🌱</span></div>
+          <h3 class="exp-title">Green Intern</h3>
+          <p class="exp-org">1M1B &mdash; 1 Million for 1 Billion</p>
+          <p class="exp-desc">Contributed to sustainability-focused initiatives as part of a global youth internship program.</p>
+          <button class="btn btn-glass btn-sm" data-modal-trigger="cert-1m1b-modal">View Certificate</button>
+        </div>
+
+        <div class="experience-card glass-card" data-animate="fade-up" data-delay="100">
+          <div class="exp-icon"><span>💻</span></div>
+          <h3 class="exp-title">Technical Head</h3>
+          <p class="exp-org">Fortis Technical Club</p>
+          <p class="exp-desc">Technical Head of the Fortis Technical Club at Easwari Engineering College.</p>
+        </div>
+
+        <div class="experience-card glass-card" data-animate="fade-up" data-delay="200">
+          <div class="exp-icon"><span>🌐</span></div>
+          <h3 class="exp-title">Cisco Boost 6.0</h3>
+          <p class="exp-org">Cisco Networking Academy</p>
+          <p class="exp-desc">Gained hands-on exposure to networking fundamentals, security and connectivity concepts.</p>
+          <button class="btn btn-glass btn-sm" data-modal-image="assets/images/certificates/cisco/boost_6_0.jpg" data-modal-title="Cisco Boost 6.0 – Certificate of Completion">View Certificate</button>
+        </div>
+
+        <div class="experience-card glass-card" data-animate="fade-up" data-delay="300">
+          <div class="exp-icon"><span>🔬</span></div>
+          <h3 class="exp-title">Research Intern</h3>
+          <p class="exp-org">Microchip Centre of Excellence</p>
+          <p class="exp-desc">Worked as a research intern under the Microchip Centre of Excellence, gaining exposure to a research-oriented environment.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section id="achievements" class="section achievements-section">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="section-eyebrow">Recognitions</span>
+        <h2 class="section-title">Achievements &amp; <span class="gradient-text">Hackathons</span></h2>
+      </div>
+
+      <div class="achievements-grid">
+
+        <div class="achievement-card glass-card" data-animate="pop">
+          <span class="status-badge badge-runnerup">🥈 Runner-up</span>
+          <h3 class="achievement-title">Nexora &ndash; Project Expo</h3>
+          <p class="achievement-org">Department of Computer Science and Design, Easwari Engineering College</p>
+          <button class="btn btn-glass btn-sm" data-modal-image="assets/images/achievements/nexora.jpg" data-modal-title="Nexora – Project Expo (Runner-up)">View Certificate</button>
+        </div>
+
+
+        <div class="achievement-card glass-card" data-animate="pop">
+          <span class="status-badge badge-runnerup2">🥉 Second Runner-Up</span>
+          <h3 class="achievement-title">Origin &ndash; 24 Hours Hackathon</h3>
+          <p class="achievement-org">SIMATS Engineering College</p>
+          <button class="btn btn-glass btn-sm" data-modal-image="assets/images/achievements/simats-certificate.jpg" data-modal-title="Origin – 24 Hours Hackathon">View Certificate</button>
+        </div>
+
+        <div class="achievement-card glass-card" data-animate="pop" data-delay="80">
+          <span class="status-badge badge-top100">🎖 Top 100</span>
+          <h3 class="achievement-title">Zyph 2026 &ndash; Global Summit</h3>
+          <p class="achievement-org">SRM Institute of Science and Technology</p>
+          <button class="btn btn-glass btn-sm" data-modal-image="assets/images/achievements/zyph.jpg" data-modal-title="Zyph 2026 – Global Summit">View Certificate</button>
+        </div>
+
+        <div class="achievement-card glass-card" data-animate="pop" data-delay="160">
+          <span class="status-badge badge-semifinalist">⭐ Semi Finalist</span>
+          <h3 class="achievement-title">Convolve 4.0</h3>
+          <p class="achievement-org">IDFC FIRST Bank</p>
+          <button class="btn btn-glass btn-sm" data-modal-image="assets/images/achievements/convloe.jpg" data-modal-title="Convolve 4.0">View Certificate</button>
+        </div>
+
+        <div class="achievement-card glass-card" data-animate="pop" data-delay="240">
+          <span class="status-badge badge-finalist">⭐ Finalist</span>
+          <h3 class="achievement-title">VisAIon &ndash; 24 Hours Hackathon</h3>
+          <p class="achievement-org">SRM Easwari Engineering College (SRMEEC)</p>
+          <button class="btn btn-glass btn-sm" data-modal-image="assets/images/achievements/VisAIon.jpg" data-modal-title="VisAIon – 24 Hours Hackathon">View Certificate</button>
+        </div>
+
+        <div class="achievement-card glass-card" data-animate="pop" data-delay="400">
+          <span class="status-badge badge-finalist">⭐ Finalist</span>
+          <h3 class="achievement-title">Thinkathon 9.0</h3>
+          <p class="achievement-org">Hindustan Institute of Science and Technology</p>
+          <button class="btn btn-glass btn-sm" data-modal-image="assets/images/achievements/Hindustan.jpg" data-modal-title="Thinkathon 9.0">View Certificate</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications" class="section certifications-section">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="section-eyebrow">Verified Learning</span>
+        <h2 class="section-title">Certifications</h2>
+      </div>
+
+      <div class="cert-tabs" role="tablist" data-animate="fade-up">
+        <button class="cert-tab active" data-cert-org="aws" role="tab" aria-selected="true">
+          <span class="cert-tab-logo logo-aws"><img src="assets/icons/certifications/aws.svg" alt="" loading="lazy" /></span>AWS
+        </button>
+        <button class="cert-tab" data-cert-org="cisco" role="tab" aria-selected="false">
+          <span class="cert-tab-logo logo-cisco"><img src="assets/icons/certifications/cisco.svg" alt="" loading="lazy" /></span>Cisco
+        </button>
+        <button class="cert-tab" data-cert-org="mongodb" role="tab" aria-selected="false">
+          <span class="cert-tab-logo logo-mongodb"><img src="assets/icons/certifications/mongodb.svg" alt="" loading="lazy" /></span>MongoDB
+        </button>
+        <button class="cert-tab" data-cert-org="infosys" role="tab" aria-selected="false">
+          <span class="cert-tab-logo logo-infosys"><img src="assets/icons/certifications/infosys.svg" alt="" loading="lazy" /></span>Infosys
+        </button>
+        <button class="cert-tab" data-cert-org="nptel" role="tab" aria-selected="false">
+          <span class="cert-tab-logo logo-nptel"><img src="assets/icons/certifications/nptel.svg" alt="" loading="lazy" /></span>NPTEL
+        </button>
+      </div>
+
+      <div class="cert-panels">
+
+        <div class="cert-panel active" data-cert-panel="aws">
+          <div class="cert-grid">
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/aws/aws_cloud_practitioner.jpg" data-modal-title="AWS Cloud Practitioner">
+              <span class="cert-item-icon">☁️</span><span>Cloud Practitioner</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/aws/aws_gen_ai.jpg" data-modal-title="AWS Generative AI Practitioner">
+              <span class="cert-item-icon">✨</span><span>Generative AI Practitioner</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-panel" data-cert-panel="cisco">
+          <div class="cert-grid">
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/cisco/learnathon_2025.jpg" data-modal-title="Learn-A-Thon 2025 Award">
+              <span class="cert-item-icon">🏅</span><span>Learn-A-Thon 2025 Award</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/cisco/learnathon_2026.jpg" data-modal-title="Learn-A-Thon 2026 Award">
+              <span class="cert-item-icon">🏅</span><span>Learn-A-Thon 2026 Award</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/cisco/python_essentials_2.jpg" data-modal-title="Python Essentials 2">
+              <span class="cert-item-icon">🐍</span><span>Python Essentials 2</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/cisco/network_defense.jpg" data-modal-title="Network Defense">
+              <span class="cert-item-icon">🛡️</span><span>Network Defense</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/cisco/cyber_threat_management.jpg" data-modal-title="Cyber Threat Management">
+              <span class="cert-item-icon">🔐</span><span>Cyber Threat Management</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/cisco/intro_modern_ai.jpg" data-modal-title="Introduction to Modern AI">
+              <span class="cert-item-icon">🤖</span><span>Introduction to Modern AI</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/cisco/security_connectivity.jpg" data-modal-title="Security and Connectivity Support">
+              <span class="cert-item-icon">🔗</span><span>Security and Connectivity Support</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-panel" data-cert-panel="mongodb">
+          <div class="cert-grid">
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/mongodb/ai_data_strategy.jpg" data-modal-title="AI Data Strategy">
+              <span class="cert-item-icon">🍃</span><span>AI Data Strategy</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/mongodb/ai_agents_mongodb.jpg" data-modal-title="AI Agents with MongoDB">
+              <span class="cert-item-icon">🍃</span><span>AI Agents with MongoDB</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/mongodb/mongodb_basics.jpg" data-modal-title="MongoDB Basics for Students">
+              <span class="cert-item-icon">🍃</span><span>MongoDB Basics for Students</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-panel" data-cert-panel="infosys">
+          <div class="cert-grid">
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/infosys/core_java_programming.jpg" data-modal-title="Core Java Programming Revisited">
+              <span class="cert-item-icon">☕</span><span>Core Java Programming Revisited</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/infosys/python_clean_coding.jpg" data-modal-title="Python Clean Coding">
+              <span class="cert-item-icon">🐍</span><span>Python Clean Coding</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/infosys/power_of_networking.jpg" data-modal-title="Power of Networking">
+              <span class="cert-item-icon">🌐</span><span>Power of Networking</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/infosys/business_communication.jpg" data-modal-title="Basics of Business Communication">
+              <span class="cert-item-icon">🗣️</span><span>Basics of Business Communication</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-panel" data-cert-panel="nptel">
+          <div class="cert-grid">
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/nptel/intro_iot.jpg" data-modal-title="Introduction to IoT">
+              <span class="cert-item-icon">📡</span><span>Introduction to IoT</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/nptel/industry_4_0.jpg" data-modal-title="Introduction to Industry 4.0 & Industrial IoT">
+              <span class="cert-item-icon">🏭</span><span>Industry 4.0 &amp; Industrial IoT</span>
+            </button>
+            <button class="cert-item glass-card" data-modal-image="assets/images/certificates/nptel/blockchain.jpg" data-modal-title="Blockchain and its Applications">
+              <span class="cert-item-icon">⛓️</span><span>Blockchain and its Applications</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CODING PROFILES ============ -->
+  <section id="coding" class="section coding-section">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="section-eyebrow">Practice &amp; Problem Solving</span>
+        <h2 class="section-title">Coding <span class="gradient-text">Profiles</span></h2>
+      </div>
+
+      <div class="coding-grid">
+        <div class="coding-card glass-card" data-animate="fade-up">
+          <div class="coding-icon"><img src="assets/icons/coding/leetcode.svg" alt="LeetCode" loading="lazy" /></div>
+          <h3>LeetCode</h3>
+          <p class="coding-username">@Vidhya_0497</p>
+          <a href="https://leetcode.com/u/Vidhya_0497/" target="_blank" rel="noopener" class="btn btn-glass btn-sm">Visit Profile</a>
+        </div>
+        <div class="coding-card glass-card" data-animate="fade-up" data-delay="80">
+          <div class="coding-icon"><img src="assets/icons/coding/hackerrank.svg" alt="HackerRank" loading="lazy" /></div>
+          <h3>HackerRank</h3>
+          <p class="coding-username">@vidhyaraj0497</p>
+          <a href="https://www.hackerrank.com/profile/vidhyaraj0497" target="_blank" rel="noopener" class="btn btn-glass btn-sm">Visit Profile</a>
+        </div>
+        <div class="coding-card glass-card" data-animate="fade-up" data-delay="160">
+          <div class="coding-icon"><img src="assets/icons/coding/codechef.svg" alt="CodeChef" loading="lazy" /></div>
+          <h3>CodeChef</h3>
+          <p class="coding-username">@vidhyaraj_0497</p>
+          <a href="https://www.codechef.com/users/vidhyaraj_0497" target="_blank" rel="noopener" class="btn btn-glass btn-sm">Visit Profile</a>
+        </div>
+        <div class="coding-card glass-card" data-animate="fade-up" data-delay="240">
+          <div class="coding-icon"><img src="assets/icons/coding/geeksforgeeks.svg" alt="GeeksforGeeks" loading="lazy" /></div>
+          <h3>GeeksforGeeks</h3>
+          <p class="coding-username">@vidhyarxnt2</p>
+          <a href="https://www.geeksforgeeks.org/profile/vidhyarxnt2" target="_blank" rel="noopener" class="btn btn-glass btn-sm">Visit Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-head" data-animate="fade-up">
+        <span class="section-eyebrow">Let's build something</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-animate="fade-right">
+          <p class="contact-intro">
+            Have a project in mind, an internship opportunity, or just want to say hi?
+            My inbox is always open.
+          </p>
+
+          <div class="contact-detail">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:vidhyaraj0497@gmail.com">vidhyaraj0497@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">📞</span>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+910000000000" class="project-link-placeholder">+91 XXXXX XXXXX</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">📍</span>
+            <div>
+              <span class="contact-label">Location</span>
+              <span>Chennai, Tamil Nadu, India</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/Vidhya0497" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.43.2 2.49.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/vidhya-raj-485306328" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.34 8.5h3.2V21h-3.2V8.5zM9.9 8.5h3.07v1.7h.04c.43-.8 1.47-1.65 3.03-1.65 3.24 0 3.84 2.13 3.84 4.9V21h-3.2v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21H9.9V8.5z"/></svg>
+            </a>
+            <a href="mailto:vidhyaraj0497@gmail.com" class="social-icon" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><rect x="2.5" y="5" width="19" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 6.5l9 6.5 9-6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card" id="contact-form" data-animate="fade-left" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+              <span class="form-error" data-error-for="cf-name"></span>
+            </div>
+            <div class="form-field">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+              <span class="form-error" data-error-for="cf-email"></span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" required />
+            <span class="form-error" data-error-for="cf-subject"></span>
+          </div>
+          <div class="form-field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            <span class="form-error" data-error-for="cf-message"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="contact-submit">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="logo-mark small">VR</span>
+    <p>&copy; <span id="footer-year"></span> R Vidhya Raj. Built with HTML, CSS &amp; JavaScript.</p>
+  </div>
+</footer>
+
+<!-- ============ TOAST CONTAINER ============ -->
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+<!-- ============ IMAGE / CERT MODAL ============ -->
+<div class="modal-overlay" id="image-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-box modal-box-viewer">
+    <button class="modal-close" id="image-modal-close" aria-label="Close">&times;</button>
+    <h3 class="modal-title" id="image-modal-title"></h3>
+
+    <div class="modal-viewer-stage">
+      <button class="modal-nav-arrow modal-nav-prev" id="modal-prev" aria-label="Previous certificate" hidden>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="modal-image-wrap" id="image-modal-wrap">
+        <img id="image-modal-img" src="" alt="" loading="lazy" />
+      </div>
+
+      <button class="modal-nav-arrow modal-nav-next" id="modal-next" aria-label="Next certificate" hidden>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-toolbar">
+      <span class="modal-counter" id="modal-counter"></span>
+      <div class="modal-zoom-controls">
+        <button class="modal-zoom-btn" id="modal-zoom-out" aria-label="Zoom out">&minus;</button>
+        <span class="modal-zoom-level" id="modal-zoom-level">100%</span>
+        <button class="modal-zoom-btn" id="modal-zoom-in" aria-label="Zoom in">+</button>
+        <button class="modal-zoom-btn modal-zoom-reset" id="modal-zoom-reset" aria-label="Reset zoom">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PATENT PROOF MODAL ============ -->
+<div class="modal-overlay" id="patent-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" data-modal-close aria-label="Close">&times;</button>
+    <h3 class="modal-title">Patent Proof &mdash; Smart Food Freshness Monitoring System</h3>
+    <div class="modal-image-wrap">
+      <img src="assets/images/patents/patent_proof.jpg" alt="Patent proof document" loading="lazy" />
+    </div>
+    <a href="assets/images/patents/Patent_proof.pdf" target="_blank" rel="noopener" class="btn btn-glass btn-sm modal-pdf-link">Open Original PDF</a>
+  </div>
+</div>
+
+<!-- ============ 1M1B CERTIFICATE MODAL ============ -->
+<div class="modal-overlay" id="cert-1m1b-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" data-modal-close aria-label="Close">&times;</button>
+    <h3 class="modal-title">Green Intern Certificate &mdash; 1M1B</h3>
+    <div class="modal-image-wrap">
+      <img src="assets/images/certificates/1m1b/intern_1m1b.jpg" alt="1M1B Green Intern certificate" loading="lazy" />
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
